@@ -3,7 +3,7 @@ import {Link,withRouter} from 'react-router-dom'
 
 const isActive =(history,path)=>{
     if(history.location.pathname === path){
-        return {color: '#0000FF'};   // (blue) coror nav page on. 
+        return {color: '#02D64FF'};   // (blue) coror nav page on. 
     } else {
         return {color: '#000000'};  // (black) color nav page not on. 
     }
