@@ -37,9 +37,6 @@ export const signup = (user)=>{
      })
  }
 
-
-
-
  export const authenticate = (data,next)=>{
     if(typeof window!=='undefined'){
         localStorage.setItem('jwt', JSON.stringify(data))
@@ -61,7 +58,6 @@ export const signup = (user)=>{
         .catch(err=>console.log(err))
     }
  }
-
 
  export const isAuthenticated = ()=>{
      if (typeof window=='undefined'){ 

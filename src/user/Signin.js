@@ -20,8 +20,6 @@ const Signin = () => {
         setValues({...values,error:false,[name]:event.target.value})
     }
 
-    
-
     const clickSubmit=(event)=>{
         event.preventDefault()
         setValues({...values,error:false,loading:true})

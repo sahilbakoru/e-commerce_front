@@ -17,8 +17,6 @@ const Signup = () => {
         setValues({...values,error:false,[name]:event.target.value})
     }
 
-    
-
     const clickSubmit=(event)=>{
         event.preventDefault()
         setValues({...values,error:false})
