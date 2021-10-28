@@ -39,6 +39,9 @@ const Signup = () => {
 
     const signUpForm =()=>(
         <form>
+            <video loop={true} autoPlay={true} muted={true} style={{height:"50%", width:"100%"}} >
+         <source src='signup.mp4' type="video/mp4" />
+       </video>
             <div className="form-group"> 
                 <label className="text-muted"> Name </label>
                 <input onChange={handleChange('name')} type="text" 
@@ -56,7 +59,10 @@ const Signup = () => {
                 <input onChange={handleChange('password')} type="password" 
                 className="form-control form-control-lg" value={password} />
             </div>
-            <button onClick={clickSubmit} className="btn btn-primary btn-lg btn-block ">Submit</button>
+            <button onClick={clickSubmit} className="btn btn-danger btn-lg btn-block ">Submit</button>
+
+            <br/>
+            <br/>
         </form>
     )
 
@@ -72,9 +78,9 @@ const Signup = () => {
      </div>
     )
 
-    return (
-        <Layout title="Create account  " discription ="Signup to node react e_commerce app" 
-        className="container col-md-5 offset-md-2.5  " >
+   return (
+       <Layout title="Create account  " discription ="Signup to node react e_commerce app" 
+       className="container col-md-5 offset-md-2.5  " >
             {showSuccess()}
             {showError()}
             {signUpForm()}

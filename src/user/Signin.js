@@ -40,9 +40,12 @@ const Signin = () => {
     }
 
     const signUpForm =()=>(
+
         <form>
-           
-            <div className="form-group"> 
+        <video loop={true} autoPlay={true} muted={true} style={{height:"50%", width:"100%"}} >
+         <source src='signin.mp4' type="video/mp4" />
+       </video>
+          <div className="form-group"> 
                 <label className="text-muted"> Email </label>
                 <input onChange={handleChange('email')} type="email" 
                 className="form-control form-control-lg" value={email}/>
@@ -53,8 +56,12 @@ const Signin = () => {
                 <input onChange={handleChange('password')} type="password" 
                 className="form-control form-control-lg" value={password} />
             </div>
-            <button onClick={clickSubmit} className="btn btn-primary btn-lg btn-block ">Submit</button>
+            <button onClick={clickSubmit} className="btn btn-danger btn-lg btn-block ">Submit</button>
+      <br/>
+      <br/>
         </form>
+    
+        
     )
 
     const showError=()=>(
