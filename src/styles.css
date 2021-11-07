@@ -123,7 +123,7 @@
     jumbotron animation
 */
 
-.jumbotron {
+/* .jumbotron {
     width: 30wh;
     height: 30vh;
     color: #fff;
@@ -168,15 +168,15 @@
     100% {
         background-position: 0% 50%;
     }
-}
+} */
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .container{
       width: 100%;
       display: block;
       margin-bottom: 20px;
     }
-  }
+  } */
 
   
