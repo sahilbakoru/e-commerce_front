@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import {getProducts} from './apiCore'
 import Card from './card'
 import "../styles.css"
+import Search from './Search'
 
 
 const Home = () => {
@@ -38,6 +39,7 @@ const Home = () => {
   return(
      
     <Layout title="Home page" description="Node React App" className='container-fluid'>
+      <Search/>
       <h2 className='mb-4 '>Best Sellers</h2>
       <div className='row'>
       {productsBySell.map((product,i)=>(
