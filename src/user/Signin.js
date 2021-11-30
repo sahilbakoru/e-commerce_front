@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import { Redirect } from 'react-router-dom';
 import Layout from '../core/Layout'
 import { signin,authenticate, isAuthenticated } from '../auth'
+import Menu from '../core/Menu';
+
 
 const Signin = () => {
     const [values,setValues]=useState({ 
@@ -42,23 +44,26 @@ const Signin = () => {
     const signUpForm =()=>(
 
          
-             <div class="row">
-          <div class="col">
-        <div class="card"style={{border:"white"}}>
-        <div class="card-body">
-        <video loop={true} autoPlay={true} muted={true} style={{height:"100%", width:"100%"}} >
-         <source src='signin.mp4' type="video/mp4" />
-       </video>
-       </div>
-       </div>
-       </div>
+    //          <div className="row"style={{placeItems:"center",margin:"4%"}}>
+    //       <div className="col">
+    //     <div className="card"style={{border:"white",placeItems:"center"}}>
+    //     <div className="card-body">
+    //     <video loop={true} autoPlay={true} muted={true} style={{height:"15rex",width:"15rex"}} >
+    //      <source src='signin.mp4' type="video/mp4" />
+    //    </video>
+    //    </div>
+    //    </div>
+    //    </div>
 
        
-       <form>
-       <div class="row">
-       <div class="col">
-       <div class="card"style={{margin:"20px",border:"white"}} >
-       <div class="card-body">
+       <form style={{margin:"30%"}}>
+       <div className="row">
+       <div className="col">
+       <div className="card"style={{border:"white"}} >
+       <div className="card-body">
+       {/* <video loop={true} autoPlay={true} muted={true} style={{height:"100%",width:"100%"}} >
+         <source src='signin.mp4' type="video/mp4" />
+       </video> */}
           <div className="form-group"> 
                 <label className="text-muted"> Email </label>
                 <input onChange={handleChange('email')} type="email" 
@@ -71,12 +76,12 @@ const Signin = () => {
                 className="form-control form-control-lg" value={password} />
             </div>
             <button onClick={clickSubmit} className="btn btn-danger btn-lg btn-block ">Submit</button>
-         </div>   
+            </div>
       </div>
       </div>
       </div>
       </form>
-      </div>
+    //   </div>
 
        
        
@@ -112,14 +117,14 @@ const Signin = () => {
        }
 
     return (
-        <Layout title="Log in  " discription ="Login to node react e_commerce app" 
-        className="container col-md-5 offset-md-2.5  " >
+        <div>
+        <Menu/>
             {showLoading()}
             {showError()}
             {signUpForm()}
             {redirectUser()}
            
-        </Layout>
+        </div>
      )
 }
 
