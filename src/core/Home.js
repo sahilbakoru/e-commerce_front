@@ -38,7 +38,7 @@ const Home = () => {
 
   return(
      
-    <Layout title="Home page" description="Node React App" className='container-fluid'>
+    <Layout title="Home page" discription="Node React App" className='container-fluid'>
       <Search/>
       <h2 className='mb-4 ' style={{margin:"50px"}}>Best Sellers</h2>
       <div className='row'>
@@ -46,6 +46,9 @@ const Home = () => {
         <Card key={i} product={product}/>
       ))}
       </div>
+      <br/>
+<br/>
+<br/>
       <div class="about-section">
   <h1>About Us</h1>
   <br/>
@@ -54,8 +57,10 @@ const Home = () => {
 <h5>We provide products of brands like EXIDE, EASY SOLAR, Stateon etc. wchich have excellent performance, energy saving and high efficiency at competitive and affordable prices.</h5>
 <br/>
   <h5>Our organisation is led by proprietor Mr. Satpal Mittal with managing director Mr. Madhukar Mittal.</h5>
-
 </div>
+<br/>
+<br/>
+<br/>
       <h2 className='mb-4 ' style={{margin:"50px"}} >New Arrivals</h2>
       <div className='row'>
       {productsByArrival.map((product,i)=>(
@@ -64,18 +69,20 @@ const Home = () => {
       </div>
 
 {/* comment */}
-<div class="container mt-6 contact-style" id="contactid"></div>
+<br/>
+<br/>
+<br/>
+<div class="container mt-4 contact-style" id="contactid" ></div>
   <div class="row"></div>
-    <div class="col-md-10 col-12 mx-auto"></div>
-      <h1 class="text-center main-heading">Contact</h1>
+    <div class="col-md-10 col-12 mx-auto"  ></div>
+      <h1 class="text-center main-heading">Contact Us</h1>
       <h4 class="text-center sub-heading">
         we will be happy to help you
       </h4>
      <div class="row"></div>
-    <div class="col-md-10 col-12 mx-auto"></div>
-
-
-<form action="/" method="POST">
+    <div class="col-md-10 col-12 mx-auto"  ></div>
+    
+<form action="/" method="POST" style={{marginLeft:"15%",marginRight:"15%"}} >
   <div class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="InputnName1" placeholder="Full Name"
@@ -95,18 +102,20 @@ const Home = () => {
      name="message"  />
     </div>
 
-  <button type="submit"  class="btn " style={{marginLeft:"50%", marginRight:"50%" , color:"red"}}>Submit</button>
+  <button type="submit"  class="btn" style={{marginLeft:"44%", color:"red"}}>Submit</button>
   <p></p>
   <p></p>
 </form>
-
+<br/>
+<br/>
+<br/>
 {/* fotter */}
 
 <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
-            <h6>Diwakar Singh</h6>
+            <h6>Sat Solar Energy</h6>
             <p class="text-justify"></p>
           </div>
 

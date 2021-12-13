@@ -16,7 +16,7 @@ const Card=({product})=>{
     <p className="card-text" style={{marginLeft:"20px",fontWeight:"900"}}> {product.name}</p>
     <p className="card-text" style={{marginLeft:"20px"}}> {product.description.substring(0,100)}</p>
     <p className="card-text" style={{marginLeft:"18px",fontWeight:"100 "}} > Rs {product.price}</p>
-    <Link to="/" className='btn btn-danger'style={{margin:"15px"}}>View Product</Link>
+    <Link to={`/product/${product._id}`} className='btn btn-danger'style={{margin:"15px"}}>View Product</Link>
     <Link to="/" className='btn btn mt-1' style={{margin:"7px"}} >Add to cart</Link>
 
     </div>
