@@ -12,12 +12,8 @@ const isActive =(history,path)=>{
 }
 
 const Menu =({history})=>(
-    <div >
+
         <ul className="nav nav-tabs bg-light">
-        {/* <img  src="https://files.porsche.com/filestore/image/multimedia/none/exclusive-911carrara4s-1-banner-01/normal/00146f4f-7e23-11ea-80c9-005056bbdc38/porsche-normal.jpg"  style={{hieght:"100px", width:"100px" , marginRight:"500px"} } /> */}
-       
-      
-            
             <li className="nav-item">
                 <Link className="nav-link" style= {isActive(history,'/')} to="/"> Home 
                 </Link>
@@ -41,7 +37,7 @@ const Menu =({history})=>(
                 </li>
                 
             )}
- <Search/>
+         <Search/>
            {!isAuthenticated() && (
                <Fragment>
                     <li className="nav-item">
@@ -70,7 +66,7 @@ const Menu =({history})=>(
 
 </ul>
         
-    </div>
+ 
 )
 
 export default withRouter(Menu)

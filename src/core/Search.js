@@ -74,7 +74,7 @@ const Search = () => {
     }
 
     const searchForm = () => (
-        <form  onSubmit={searchSubmit}style={{ marginBottom:"0%"}} >
+       
             <span className="input-group-text" >
                 <div className="input-group-text input-group" >
                     <div className="input-group-prepend" >
@@ -99,7 +99,7 @@ const Search = () => {
                     </button>
                 </div>
             </span>
-        </form>
+        
     );
 
     return (
