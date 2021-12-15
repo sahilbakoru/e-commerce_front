@@ -84,7 +84,18 @@ const Home = () => {
         <Card key={i} product={product}/>
       ))}
       </div>
-      <br/>
+
+      <h2 className='mb-4 ' style={{margin:"50px"}} >New Arrivals</h2>
+      <div className='row'>
+      {productsByArrival.map((product,i)=>(
+        <Card key={i} product={product}/>
+      ))}
+      </div>
+
+{/* comment */}
+
+
+<br/>
 <br/>
 <br/>
       <div class="about-section">
@@ -99,12 +110,6 @@ const Home = () => {
 <br/>
 <br/>
 <br/>
-      <h2 className='mb-4 ' style={{margin:"50px"}} >New Arrivals</h2>
-      <div className='row'>
-      {productsByArrival.map((product,i)=>(
-        <Card key={i} product={product}/>
-      ))}
-      </div>
 
 {/* comment */}
 <br/>
