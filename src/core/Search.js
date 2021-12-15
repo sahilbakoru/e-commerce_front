@@ -63,7 +63,7 @@ const Search = () => {
     const searchedProduct = (results = []) => {
         return (
             <div>
-                <h2 className="mt-4 mb-4" >
+                <h2 className="mt-4" >
                     { searchMessage(search, results)}
                 </h2>
                 <div className="row">
@@ -74,9 +74,9 @@ const Search = () => {
     }
 
     const searchForm = () => (
-        <form className="mt-5 mb-4" onSubmit={searchSubmit}>
+        <form  onSubmit={searchSubmit}style={{ marginBottom:"0%"}} >
             <span className="input-group-text" >
-                <div className="input-group-text input-group-lg w-100">
+                <div className="input-group-text input-group" >
                     <div className="input-group-prepend" >
                         <select className="btn mr-2" onChange={handleChange('category')}>
                             <option value="All">
@@ -91,7 +91,7 @@ const Search = () => {
                                 </option>))}
                         </select>
                     </div>
-                    <input type="search" className="form-control ms-3" style={{ border: 'white' }} onChange={handleChange('search')} placeholder="Search by name" />
+                    <input type="search" className="form-control " style={{ border: 'white' }} onChange={handleChange('search')} placeholder="Search by name" />
                 </div>
                 <div className="btn input-group-append" style={{ border: 'white' }} >
                     <button className="input-group-text">
@@ -103,8 +103,8 @@ const Search = () => {
     );
 
     return (
-        <div>
-            <div className="container" >
+        <div style={{marginLeft:"20%" }}>
+            <div >
                 {searchForm()}
                 <div className="container-fluid">
                     {searchedProduct(results)}

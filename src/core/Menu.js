@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react'
 import {Link,withRouter} from 'react-router-dom'
 import {signout,isAuthenticated} from '../auth'
+import Search from './Search'
 
 const isActive =(history,path)=>{
     if(history.location.pathname === path){
@@ -11,8 +12,12 @@ const isActive =(history,path)=>{
 }
 
 const Menu =({history})=>(
-    <div>
+    <div >
         <ul className="nav nav-tabs bg-light">
+        {/* <img  src="https://files.porsche.com/filestore/image/multimedia/none/exclusive-911carrara4s-1-banner-01/normal/00146f4f-7e23-11ea-80c9-005056bbdc38/porsche-normal.jpg"  style={{hieght:"100px", width:"100px" , marginRight:"500px"} } /> */}
+       
+      
+            
             <li className="nav-item">
                 <Link className="nav-link" style= {isActive(history,'/')} to="/"> Home 
                 </Link>
@@ -28,14 +33,15 @@ const Menu =({history})=>(
                     </Link>
                 </li>
             )}
-            
+             
             {isAuthenticated() && isAuthenticated().user.role === 1 &&(
                 <li className="nav-item">
                     <Link className="nav-link" style= {isActive(history,'/admin/dashboard')} to="/admin/dashboard"> Dashboard 
                     </Link>
                 </li>
+                
             )}
-
+ <Search/>
            {!isAuthenticated() && (
                <Fragment>
                     <li className="nav-item">
@@ -47,7 +53,7 @@ const Menu =({history})=>(
                 <Link className="nav-link" style= {isActive(history,'/signup')} to="/signup"> Signup 
                 </Link>
             </li>
-               
+           
               </Fragment>
            )}
 
@@ -62,8 +68,8 @@ const Menu =({history})=>(
             </li>
           )}
 
-
-        </ul>
+</ul>
+        
     </div>
 )
 

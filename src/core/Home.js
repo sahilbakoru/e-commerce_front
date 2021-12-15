@@ -4,6 +4,7 @@ import {getProducts} from './apiCore'
 import Card from './card'
 import "../styles.css"
 import Search from './Search'
+import Menu from "./Menu";
 
 
 const Home = () => {
@@ -38,8 +39,45 @@ const Home = () => {
 
   return(
      
-    <Layout title="Home page" discription="Node React App" className='container-fluid'>
-      <Search/>
+    <div>
+      
+<Menu/>
+
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+ 
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://files.porsche.com/filestore/image/multimedia/none/exclusive-911carrara4s-1-banner-01/normal/00146f4f-7e23-11ea-80c9-005056bbdc38/porsche-normal.jpg" alt="First slide"/>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://files.porsche.com/filestore/image/multimedia/none/exclusive-911carrara4s-1-banner-01/normal/00146f4f-7e23-11ea-80c9-005056bbdc38/porsche-normal.jpg" alt="Second slide"/>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://files.porsche.com/filestore/image/multimedia/none/exclusive-911carrara4s-1-banner-01/normal/00146f4f-7e23-11ea-80c9-005056bbdc38/porsche-normal.jpg" alt="Third slide"/>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden=""></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+
+
       <h2 className='mb-4 ' style={{margin:"50px"}}>Best Sellers</h2>
       <div className='row'>
       {productsBySell.map((product,i)=>(
@@ -155,7 +193,7 @@ const Home = () => {
 
 {/* fotter */}
 
-    </Layout>
+    </div>
     
   );
 }

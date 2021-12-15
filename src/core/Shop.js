@@ -106,7 +106,7 @@ const Shop = () => {
             title="Shop Page"
             discription="Search and find products of your choice"
         >
-            <Search/>
+           
             <div className="row mt-5">
                 <div className="col-4" >
                     <h4 >Filter by categories</h4>

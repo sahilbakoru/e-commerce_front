@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../core/Layout'
 import { signup } from '../auth'
+import Menu from '../core/Menu';
 
 const Signup = () => {
     const [values,setValues]=useState({ 
@@ -38,8 +39,8 @@ const Signup = () => {
     }
 
     const signUpForm =()=>(
-        <form>
-            <video loop={true} autoPlay={true} muted={true} style={{height:"50%", width:"100%"}} >
+        <form style={{height:"30%", width:"50%", marginLeft:"25%"}} >
+            <video loop={true} autoPlay={true} muted={true} style={{height:"50%", width:"50%", marginLeft:"25%"}} >
          <source src='signup.mp4' type="video/mp4" />
        </video>
             <div className="form-group"> 
@@ -79,13 +80,13 @@ const Signup = () => {
     )
 
    return (
-       <Layout title="Create account  " discription ="Signup to node react e_commerce app" 
-       className="container col-md-5 offset-md-2.5  " >
+      <div>
+          <Menu/>
             {showSuccess()}
             {showError()}
             {signUpForm()}
-           
-        </Layout>
+            </div>  
+       
      )
 }
 
