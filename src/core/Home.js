@@ -52,9 +52,9 @@ const Home = () => {
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://scontent.fixc8-2.fna.fbcdn.net/v/t39.30808-6/264061757_10159405266066970_5855602353457459729_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=6e5ad9&_nc_ohc=cSBWVLcHSmMAX8Rcwfg&_nc_ht=scontent.fixc8-2.fna&oh=00_AT-a63WQzmAjDwFYkEo-kFp7uqattonmNsHM8AhfIkouhQ&oe=61BDD458" alt="First slide"/>
-    </div>
+    {/* <div class="carousel-item active">
+      <img class="d-block w-100" src="logo512.png" alt="First slide"/>
+    </div> */}
     <div class="carousel-item">
       <img class="d-block w-100" src="https://files.porsche.com/filestore/image/multimedia/none/rd-2015-christophorus-issue374-article01-banner/normal/ab10b053-823d-11e5-b99f-0019999cd470/porsche-normal.jpg" alt="Second slide"/>
     </div>
