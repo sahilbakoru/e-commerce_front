@@ -13,7 +13,6 @@ const Signin = () => {
         error: '',
         loading: false,
         redirectToReferrer: false,
-
     })
 
     const {email,password,loading,error,redirectToReferrer} = values
